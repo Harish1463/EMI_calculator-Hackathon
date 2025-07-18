@@ -1,0 +1,50 @@
+# Start the selenium grid in the system
+java -jar selenium-server-4.34.0.jar standalone
+
+# Allure: Launches a temporary web server and renders the report from raw results
+allure serve target/allure-results
+
+# Allure: Converts raw test output (usually in target/allure-results) into a full HTML report
+allure generate target/allure-results -o target/allure-report --clean
+
+# Allure: Opens the HTML report you just generated in a browser
+allure open target/allure-report
+
+-------------------------------------------------
+
+# Deletes previous build data (fresh start)
+maven clean
+
+# Compiles your Java source files
+mvn compile
+
+# Runs tests using TestNG/Cucumber
+mvn test
+
+# Runs tests & checks build integrity
+mvn verify
+
+# Cleans + runs tests
+mvn clean test
+
+# Builds the project and copies .jar to local Maven repo
+mvn install
+
+# Cleans old output, builds from scratch, installs locally
+mvn clean install
+
+# Compiles code, runs tests, and creates .jar / .war
+mvn package
+
+# Deletes old build (target/) first, then packages fresh .jar
+mvn clean package
+
+# maven build: 
+Is not an actual command. But “Maven build” refers to the entire build lifecycle that runs when you execute commands like:
+	mvn compile
+	mvn package
+	mvn install
+
+# Runs Java application packaged as a JAR file
+java -jar target/emiCalculator-1.0-SNAPSHOT.jar
+

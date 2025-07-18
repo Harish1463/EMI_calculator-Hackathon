@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Loan EMI Automation Suite" parallel="tests" thread-count="6">
+
+	<listeners>
+		<listener class-name="com.loanemi.listeners.RetryListener" />
+	</listeners>
+
+	<!-- TestNG: Loan EMI execution on Chrome -->
+	<!-- -->
+	<test name="TestNG - Chrome">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.loanemi.tests.LoanEMITest" />
+		</classes>
+	</test>
+	 
+
+	<!-- TestNG: Loan EMI execution on Edge -->
+	  <!--
+	<test name="TestNG - Edge">
+		<parameter name="browser" value="MicrosoftEdge" />
+		<classes>
+			<class name="com.loanemi.tests.LoanEMITest" />
+		</classes>
+	</test>  -->
+	
+	
+
+	<!--
+	<test name="Cucumber - Chrome">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.loanemi.runner.TestRunner" />
+		</classes>
+	</test>
+	
+	
+	<test name="Cucumber - Edge">
+		<parameter name="browser" value="MicrosoftEdge" />
+		<classes>			
+			<class name="com.loanemi.runner.TestRunner" />
+		</classes>
+	</test>
+	 -->
+
+</suite>

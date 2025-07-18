@@ -1,0 +1,59 @@
+{
+	"testCases": {
+		"TC01": {
+			"amount": "1500000",
+			"rate": "9.5",
+			"years": "1"
+		},
+		"TC02": {
+			"homeValue": "6500000",
+			"downPayment": "20",
+			"insurance": "0",
+			"amount": "5200000",
+			"rate": "9.0",
+			"tenure": "2",
+			"fees": "0.25",
+			"oneTimeExpense": "10",
+			"tax": "0.25",
+			"insurancePerYear": "0.05",
+			"maintenance": "2500",
+			"monthly": "0",
+			"yearly": "0",
+			"quarterly": "0",
+			"oneTimeOnly": "0",
+			"expectedEmi": "237561",
+			"expectedExtra": "0",
+			"expectedTax": "1354",
+			"expectedInsurance": "271",
+			"expectedMaintenance": "2500",
+			"expectedTotal": "241686"
+		},
+		"TC03-10": {
+			"amount": "1000000",
+			"rate": "10.75",
+			"tenure": "5",
+			"fees": "10000",
+			"emi": "21617.95",
+			"maxAmount": "20000000",
+			"maxRate": "20",
+			"maxTenure": "30",
+			"maxFees": "100000",
+			"maxEmi": "100000",
+			"amountName": "Loan Amount",
+			"rateName": "Interest Rate",
+			"tenureName": "Loan Tenure",
+			"feesName": "Fees",
+			"emiName": "EMI",
+			"expectedEmi": "21618",
+			"expectedAmount": "1000000",
+			"expectedTenure": "60",
+			"expectedRate": "10.75"
+		},
+		"TC011": {
+			"amount": "20000",
+			"rate": "18",
+			"tenure": "6",
+			"fees": "300"
+		}
+	}
+}
