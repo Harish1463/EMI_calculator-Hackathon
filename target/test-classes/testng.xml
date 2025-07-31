@@ -7,7 +7,6 @@
 	</listeners>
 
 	<!-- TestNG: Loan EMI execution on Chrome -->
-	<!-- -->
 	<test name="TestNG - Chrome">
 		<parameter name="browser" value="chrome" />
 		<classes>
@@ -17,18 +16,17 @@
 	 
 
 	<!-- TestNG: Loan EMI execution on Edge -->
-	  <!--
-	<test name="TestNG - Edge">
+	<!-- <test name="TestNG - Edge">
 		<parameter name="browser" value="MicrosoftEdge" />
 		<classes>
 			<class name="com.loanemi.tests.LoanEMITest" />
 		</classes>
-	</test>  -->
+	</test> -->
 	
 	
 
-	<!--
-	<test name="Cucumber - Chrome">
+	
+	<!-- <test name="Cucumber - Chrome">
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="com.loanemi.runner.TestRunner" />
@@ -41,7 +39,7 @@
 		<classes>			
 			<class name="com.loanemi.runner.TestRunner" />
 		</classes>
-	</test>
-	 -->
+	</test>  -->
+	 
 
 </suite>

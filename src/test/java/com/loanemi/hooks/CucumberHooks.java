@@ -11,7 +11,6 @@ import org.openqa.selenium.WebDriverException;
 
 import com.aventstack.extentreports.Status;
 import com.loanemi.base.DriverSetup;
-import com.loanemi.utils.AllureReportOpener;
 import com.loanemi.utils.ConfigReader;
 import com.loanemi.utils.ExtentReportUtil;
 import com.loanemi.utils.ScreenshotUtil;
@@ -105,9 +104,10 @@ public class CucumberHooks {
         } catch (WebDriverException e) {
             logger.warn("Cucumber: WebDriver quit failed — session may already be invalid. {}", e.getMessage());
         }
-        
-        AllureReportOpener.openAllureReport();
-        logger.info("Allure report launcher invoked.");
+
+        // Finalize report for this test
+        ExtentReportUtil.flushReport();
+        logger.info("Cucumber: Flushed ExtentReports for scenario '{}'", scenarioName);
     }
 
     /**

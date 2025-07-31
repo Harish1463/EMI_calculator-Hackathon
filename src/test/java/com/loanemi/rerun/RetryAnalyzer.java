@@ -17,7 +17,7 @@ public class RetryAnalyzer implements IRetryAnalyzer {
     private int retryCount = 0;
 
     // Maximum number of retry attempts allowed
-    private final int maxRetryCount = 1;
+    private final int maxRetryCount = 3;
 
     /**
      * Invoked by TestNG when a test fails.

@@ -83,7 +83,7 @@ Roles included:
 
 ## 🚀 How to Run Locally
  
-1. Clone the repo: `git clone https://github.com/Harish1463/EMI_calculator-Hackathon.git`  
+1. Clone the repo: `git clone https://github.com/---------------------.git`  
 2. Open the project in Eclipse or IntelliJ  
 3. Install dependencies via Maven: `mvn clean install`  
 4. Run tests using TestNG or Cucumber runner  

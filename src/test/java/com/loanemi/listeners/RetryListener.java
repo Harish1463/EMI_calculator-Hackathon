@@ -21,7 +21,7 @@ import com.loanemi.rerun.RetryAnalyzer;
 public class RetryListener implements IAnnotationTransformer {
 
     private static final Logger logger = LogManager.getLogger(RetryListener.class);
-    
+
     /**
      * This method is invoked by TestNG before the test method is run.
      * It attaches the RetryAnalyzer class to each test method dynamically.

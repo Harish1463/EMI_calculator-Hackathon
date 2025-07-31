@@ -20,7 +20,6 @@ import com.loanemi.pages.CarLoanPage;
 import com.loanemi.pages.CreditCardEMICalculatorPage;
 import com.loanemi.pages.HomeLoanPage;
 import com.loanemi.pages.LoanCalculatorPage;
-import com.loanemi.rerun.RetryAnalyzer;
 import com.loanemi.utils.AllureReportOpener;
 import com.loanemi.utils.ConfigReader;
 import com.loanemi.utils.ExtentReportUtil;
@@ -58,7 +57,7 @@ public class LoanEMITest {
 
     // ================= Car Loan EMI Calculation =================
 
-    @Test(priority = 1, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 1)
     public void testCarLoanEMICalculation() {
         logger.info("TestNG: Running Car Loan EMI calculation test");
         ExtentReportUtil.createTest("Car Loan EMI Calculation")
@@ -69,7 +68,7 @@ public class LoanEMITest {
 
     // ================= Home Loan EMI Flow =================
 
-    @Test(priority = 2, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 2)
     public void testHomeLoanEMIDataExtraction() {
         logger.info("TestNG: Running Home Loan EMI data extraction test");
         ExtentReportUtil.createTest("Home Loan EMI Data Extraction")
@@ -80,7 +79,7 @@ public class LoanEMITest {
 
     // ================= EMI Calculator =================
 
-    @Test(priority = 3, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 3)
     public void testOnlyEMICalculatorFields() {
         logger.info("TestNG: Validating EMI calculator fields and sliders only");
         ExtentReportUtil.createTest("EMI Calculator Field Validation Only")
@@ -91,7 +90,7 @@ public class LoanEMITest {
         page.emiFieldValidation(); // Field-slider sync check
     }
 
-    @Test(priority = 4, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 4)
     public void testEMICalculatorUIValidation() {
         logger.info("TestNG: Validating EMI calculator summary");
         ExtentReportUtil.createTest("EMI Calculator UI Validation")
@@ -104,7 +103,7 @@ public class LoanEMITest {
 
     // ================= Loan Amount Calculator =================
 
-    @Test(priority = 5, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 5)
     public void testOnlyLoanAmountCalculatorFields() {
         logger.info("TestNG: Validating Loan Amount calculator fields and sliders only");
         ExtentReportUtil.createTest("Loan Amount Calculator Field Validation Only")
@@ -115,7 +114,7 @@ public class LoanEMITest {
         page.loanAmountFieldValidation();
     }
 
-    @Test(priority = 6, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 6)
     public void testLoanAmountCalculatorUIValidation() {
         logger.info("TestNG: Validating Loan Amount calculator summary");
         ExtentReportUtil.createTest("Loan Amount Calculator UI Validation")
@@ -128,7 +127,7 @@ public class LoanEMITest {
 
     // ================= Loan Tenure Calculator =================
 
-    @Test(priority = 7, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 7)
     public void testOnlyLoanTenureCalculatorFields() {
         logger.info("TestNG: Validating Loan Tenure calculator fields and sliders only");
         ExtentReportUtil.createTest("Loan Tenure Calculator Field Validation Only")
@@ -139,7 +138,7 @@ public class LoanEMITest {
         page.loanTenureFieldValidation();
     }
 
-    @Test(priority = 8, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 8)
     public void testLoanTenureCalculatorUIValidation() {
         logger.info("TestNG: Validating Loan Tenure calculator summary");
         ExtentReportUtil.createTest("Loan Tenure Calculator UI Validation")
@@ -152,7 +151,7 @@ public class LoanEMITest {
 
     // ================= Interest Rate Calculator =================
 
-    @Test(priority = 9, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 9)
     public void testOnlyInterestRateCalculatorFields() {
         logger.info("TestNG: Validating Interest Rate calculator fields and sliders only");
         ExtentReportUtil.createTest("Interest Rate Calculator Field Validation Only")
@@ -163,7 +162,7 @@ public class LoanEMITest {
         page.interestRateFieldValidation();
     }
 
-    @Test(priority = 10, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 10)
     public void testInterestRateCalculatorUIValidation() {
         logger.info("TestNG: Validating Interest Rate calculator summary");
         ExtentReportUtil.createTest("Interest Rate Calculator UI Validation")
@@ -176,7 +175,7 @@ public class LoanEMITest {
 
     // ================= Credit Card EMI Calculator =================
 
-    @Test(priority = 11, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 11)
     public void testCreditCardEMICalculatorCalculation() {
         logger.info("TestNG: Running Credit Card EMI calculation test");
         ExtentReportUtil.createTest("Credit Card EMI Calculation")
@@ -186,7 +185,7 @@ public class LoanEMITest {
         creditPage.navigateToCreditCardEMICalculator();
 
         String emi = creditPage.calculateAndFetchEMI();
-//        System.out.println("EMI displayed: " + emi);
+        System.out.println("EMI displayed: " + emi);
         ExtentReportUtil.getTest().log(Status.PASS, "EMI displayed as: " + emi);
     }
 

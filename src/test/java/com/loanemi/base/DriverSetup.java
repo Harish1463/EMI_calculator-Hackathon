@@ -31,7 +31,7 @@ public class DriverSetup {
 
     // Thread-local WebDriver to support parallel execution and thread isolation
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-    
+
     /**
      * Public accessor for obtaining the WebDriver instance.
      * Determines mode of execution from config: 'local' or 'remote'.
@@ -73,7 +73,6 @@ public class DriverSetup {
                 localDriver = new ChromeDriver();
                 logger.info("Local Chrome browser launched");
                 break;
-            case "edge":
             case "microsoftedge":
                 localDriver = new EdgeDriver();
                 logger.info("Local Edge browser launched");
